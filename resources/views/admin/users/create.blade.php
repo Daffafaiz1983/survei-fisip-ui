@@ -61,8 +61,10 @@
                                         class="@class(['mt-1 block w-full rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500', 'border-red-500' => $errors->has('role'), 'border-gray-300' => !$errors->has('role')])" 
                                         required>
                                     <option value="">Pilih Role</option>
-                                    <option value="user" {{ old('role') == 'user' ? 'selected' : '' }}>User</option>
                                     <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
+                                    <option value="mahasiswa" {{ old('role', 'mahasiswa') == 'mahasiswa' ? 'selected' : '' }}>Mahasiswa</option>
+                                    <option value="dosen" {{ old('role') == 'dosen' ? 'selected' : '' }}>Dosen</option>
+                                    <option value="staff" {{ old('role') == 'staff' ? 'selected' : '' }}>Staff</option>
                                 </select>
                                 @error('role')
                                     <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
